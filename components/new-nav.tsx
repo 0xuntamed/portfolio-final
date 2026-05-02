@@ -86,7 +86,7 @@ export default function Navbar() {
             </button>
           </li>
           <li>
-            <Link href="https://digitalgarden-git-main-bilals-projects-f6345ede.vercel.app/" target='_blank' className="transition-colors hover:text-black/70">
+            <Link href="https://digitalgarden-tan.vercel.app/" target='_blank' className="transition-colors hover:text-black/70">
               vault
             </Link>
           </li>
