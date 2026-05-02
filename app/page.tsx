@@ -46,8 +46,8 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="experience" className="bg-white w-full size-138 items-center ">
-          <div>
+        <section id="experience" className="bg-white w-full  items-center">
+          <div >
             <h1 className="font-semibold text-2xl ml-25 mr-10 mt-4 flex items-center justify-center">
               Experience
             </h1>
@@ -76,7 +76,11 @@ export default function Home() {
                                   company="Software Engineer"
                                   role="hirex"
                                   period="May 2021 – Mar 2023"
-                                  summary="Built the backend from scratch and architected a scalable, production ready platform, implementing robust development workflows and optimized system architecture."
+                                  summary="Built the backend from scratch and architected a scalable, production ready platform,
+                                  Built the backend from scratch and architected a scalable, production ready platform, 
+                                  implementing robust development workflows and optimized system architecture.
+                                  Built the backend from scratch and architected a scalable, production ready platform, implementing robust 
+                                  development implementing robust development workflows and optimized system architecture."
                                   logoUrl="/stealth.jpeg"
             />
 
