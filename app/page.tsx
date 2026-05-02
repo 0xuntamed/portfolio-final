@@ -1,65 +1,176 @@
+import Navbar from "@/components/new-nav";
+import { ProjectListItem } from "@/components/project-list-item";
+import { WorkItem } from "@/components/work-item";
+import Blog from "@/components/blog";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div className="h-screen w-2xl mx-auto bg-white-500">
+      <div className="flex flex-col items-center justify-center gap-2">
+        <Navbar />
+        <section
+          id="hero"
+          className="mt-20 w-full rounded-3xl border border-black/5 bg-white px-10 py-10 shadow-sm transition-shadow duration-300 hover:shadow-md"
+        >
+          <div className="flex flex-row items-center justify-center gap-8">
+            <div className="flex-shrink-0 [perspective:1000px]">
+              <div className="overflow-hidden rounded-2xl shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:[transform:rotateX(6deg)_rotateY(-8deg)_scale(1.02)]">
+                <Image
+                  src="/academia-bilal-ahmed-new.png"
+                  alt="bilal-ahmed"
+                  width={200}
+                  height={240}
+                  className="h-60 w-48 object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-center text-center">
+              <h1 className="text-2xl font-semibold">Bilal Ahmed!</h1>
+              <p className="font-medium">Software Engineer</p>
+              <p className="font-normal">Engineer || Product || Design</p>
+            </div>
+          </div>
+
+          <div className="mt-8 border-t border-black/5 pt-6">
+            <p className="text-l font-normal leading-8 text-black/80">
+            First Principle Thinking Engineer Software Engineer with 4+ years of
+            experience specializing in high-concurrency real-time systems and
+            low-level internals. Expert in building scalable infrastructure
+            using Go, Node.js, and Redis, with a deep focus on first-principles
+            engineering from NAND gates to Kubernetes orchestration. Proven
+            track record in designing complex architectures for live-streaming
+            and autonomous DevOps agentic workflows
+            </p>
+          </div>
+        </section>
+        
+        <section id="experience" className="bg-white w-full size-138 items-center ">
+          <div>
+            <h1 className="font-semibold text-2xl ml-25 mr-10 mt-4 flex items-center justify-center">
+              Experience
+            </h1>
+            <WorkItem
+                                  icon="shield"
+                                  company="Software Consultant"
+                                  role="Freelancer"
+                                  period="Present"
+                                  summary="Built the backend from scratch and architected a scalable, production ready platform, 
+                                  implementing robust development workflows and optimized system architecture.
+                                  Built the backend from scratch and architected a scalable, production ready platform, implementing robust 
+                                  development.
+                                  <br>Built the backend from scratch and architected a scalable, production ready platform, implementing robust development"
+                                  logoUrl="/stealth.jpeg"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <WorkItem
+                                  icon="shield"
+                                  company="Founding Engineer"
+                                  role="Stealth Mode"
+                                  period="August 2023 – Oct 2025"
+                                  summary="Built the backend from scratch and architected a scalable, production ready platform, implementing robust development workflows and optimized system architecture."
+                                  logoUrl="/stealth.jpeg"
+            />
+            <WorkItem
+                                  icon="shield"
+                                  company="Software Engineer"
+                                  role="hirex"
+                                  period="May 2021 – Mar 2023"
+                                  summary="Built the backend from scratch and architected a scalable, production ready platform, implementing robust development workflows and optimized system architecture."
+                                  logoUrl="/stealth.jpeg"
+            />
+
+            <p className="font-normal text-l ml-25 mr-10"></p>
+          </div>
+        </section>
+        <section id="projects" className="bg-white w-full size-185 items-center">
+          <h1 className="font-semibold text-2xl ml-25 mr-10 flex items-center justify-center mt-4">Projects</h1>
+          <ProjectListItem
+                                title="Market Pulse"
+                                links={[
+                                  {
+                                    label: "live preview ↗",
+                                    
+                                    href: "https://call2-codecore4.vercel.app/",
+                                  },
+                                  {
+                                    label: "github ↗",
+                                    href: "https://github.com/Bhanudahiyaa/Call2Code",
+                                  },
+                                ]}
+                                bullets={[
+                                  "Built in 24 hours at Call2Code Hackathon (MUJ) and selected as a finalist among 100+ teams.",
+                                  "Developed 12+ features: real-time charts, multilingual support (English, Hindi, Spanish),voice navigation using Web Speech API.",
+                                  "Integrated APIs for real-time financial analytics and sentiment analysis across 50+ tickers.",
+                                ]}
+                                tags={["React", "TypeScript", "TailwindCSS", "Supabase"]}
+          />
+          <ProjectListItem
+                                title="Market Pulse"
+                                links={[
+                                  {
+                                    label: "live preview ↗",
+                                    href: "https://call2-codecore4.vercel.app/",
+                                  },
+                                  {
+                                    label: "github ↗",
+                                    href: "https://github.com/Bhanudahiyaa/Call2Code",
+                                  },
+                                ]}
+                                bullets={[
+                                  "Built in 24 hours at Call2Code Hackathon (MUJ) and selected as a finalist among 100+ teams.",
+                                  "Developed 12+ features: real-time charts, multilingual support (English, Hindi, Spanish),voice navigation using Web Speech API.",
+                                  "Integrated APIs for real-time financial analytics and sentiment analysis across 50+ tickers.",
+                                ]}
+                                tags={["React", "TypeScript", "TailwindCSS", "Supabase"]}
+          />
+          <ProjectListItem
+                                title="Market Pulse"
+                                links={[
+                                  {
+                                    label: "live preview ↗",
+                                    href: "https://call2-codecore4.vercel.app/",
+                                  },
+                                  {
+                                    label: "github ↗",
+                                    href: "https://github.com/Bhanudahiyaa/Call2Code",
+                                  },
+                                ]}
+                                bullets={[
+                                  "Built in 24 hours at Call2Code Hackathon (MUJ) and selected as a finalist among 100+ teams.",
+                                  "Developed 12+ features: real-time charts, multilingual support (English, Hindi, Spanish),voice navigation using Web Speech API.",
+                                  "Integrated APIs for real-time financial analytics and sentiment analysis across 50+ tickers.",
+                                ]}
+                                tags={["React", "TypeScript", "TailwindCSS", "Supabase"]}
+          />
+          <ProjectListItem
+                                title="Market Pulse"
+                                links={[
+                                  {
+                                    label: "live preview ↗",
+                                    href: "https://call2-codecore4.vercel.app/",
+                                  },
+                                  {
+                                    label: "github ↗",
+                                    href: "https://github.com/Bhanudahiyaa/Call2Code",
+                                  },
+                                ]}
+                                bullets={[
+                                  "Built in 24 hours at Call2Code Hackathon (MUJ) and selected as a finalist among 100+ teams.",
+                                  "Developed 12+ features: real-time charts, multilingual support (English, Hindi, Spanish),voice navigation using Web Speech API.",
+                                  "Integrated APIs for real-time financial analytics and sentiment analysis across 50+ tickers.",
+                                ]}
+                                tags={["React", "TypeScript", "TailwindCSS", "Supabase"]}
+          />
+        </section>
+        <section id="blogs" className="bg-white size-400 w-full items-center">
+          <h1 className="font-semibold text-2xl ml-25 mr-10 mt-2 flex items-center justify-center">Blogs</h1>
+          <Blog />
+        </section>
+        <div className="bg-orange-500 w-full size-50 items-center">
+          Contact me
         </div>
-      </main>
+      </div>
     </div>
   );
 }
