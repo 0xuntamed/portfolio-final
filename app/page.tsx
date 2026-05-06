@@ -87,7 +87,7 @@ export default function Home() {
             <p className="font-normal text-l ml-25 mr-10"></p>
           </div>
         </section>
-        <section id="projects" className="bg-white w-full size-185 items-center">
+        {/* <section id="projects" className="bg-white w-full size-185 items-center">
           <h1 className="font-semibold text-2xl ml-25 mr-10 flex items-center justify-center mt-4">Projects</h1>
           <ProjectListItem
                                 title="Market Pulse"
@@ -166,7 +166,7 @@ export default function Home() {
                                 ]}
                                 tags={["React", "TypeScript", "TailwindCSS", "Supabase"]}
           />
-        </section>
+        </section> */}
         <section id="blogs" className="bg-white size-400 w-full items-center">
           <h1 className="font-semibold text-2xl ml-25 mr-10 mt-2 flex items-center justify-center">Blogs</h1>
           <Blog />
