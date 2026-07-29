@@ -6,7 +6,7 @@ type WorkItemProps = {
   role: string;
   period: string;
   summary: string;
-  icon?: "shield" | "building";
+  icon?:  "building";
   logoUrl?: string;
 };
 
@@ -18,7 +18,7 @@ export function WorkItem({
   icon = "building",
   logoUrl,
 }: WorkItemProps) {
-  const Icon = icon === "shield" ? Shield : Building2;
+  const Icon =  Building2;
   return (
     <div className="rounded-xl border mt-3 border-gray-200 bg-white px-4 py-3 md:px-5 md:py-3.5 shadow-sm hover:shadow-md transition-shadow duration-300">
       <div className="flex gap-4">

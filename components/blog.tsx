@@ -1,53 +1,36 @@
 const posts = [
   {
     id: 1,
-    title: 'Boost your conversion rate',
-    href: '#',
+    title: 'Engineering Behind File Upload',
+    href: 'https://digitalgarden-tan.vercel.app/backend/engineering-behind-uploading-a-file/',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
-    author: {
-      name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+      'Click Thats all we do.We press an Upload button, select a file, wait a few seconds, and its done. Simple. But underneath that tiny click, millions of tiny events happen before your photo finally reaches a server.Lets follow a single file on its journey.',
+    date: 'Mar 16, 2026',
+    datetime: '2026-03-16',
+    category: { title: 'Backend' },
+
   },
   {
     id: 2,
-    title: 'How to use search engine optimization to drive sales',
-    href: '#',
-    description: 'Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.',
-    date: 'Mar 10, 2020',
-    datetime: '2020-03-10',
-    category: { title: 'Sales', href: '#' },
-    author: {
-      name: 'Lindsay Walton',
-      role: 'Front-end Developer',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+    title: 'Internals of Redis',
+    href: 'https://digitalgarden-tan.vercel.app/backend/redis/',
+    
+    description: 'Building A Minimal Redis RESP2 Server In Go',
+    date: 'May 10, 2026',
+    datetime: '2026-05-10',
+    category: { title: 'Tech' },
+
   },
   {
     id: 3,
-    title: 'Improve your customer experience',
-    href: '#',
+    title: 'Load balancer',
+    href: 'https://digitalgarden-tan.vercel.app/backend/load-balnacer/',
     description:
-      'Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labore irure incididunt velit cillum quis magna dolore.',
-    date: 'Feb 12, 2020',
-    datetime: '2020-02-12',
-    category: { title: 'Business', href: '#' },
-    author: {
-      name: 'Tom Cook',
-      role: 'Director of Product',
-      href: '#',
-      imageUrl:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
+      'I wanted to build a load balancer from scratch, mostly for fun, but also because load balancing is one of those infrastructure ideas that sounds simple until you actually try to make it work.',
+    date: 'June 12, 2026',
+    datetime: '2020-06-12',
+    category: { title: 'Infra' },
+
   },
 ]
 
@@ -65,23 +48,26 @@ export default function Blog() {
                 <time dateTime={post.datetime} className="text-gray-500">
                   {post.date}
                 </time>
-                <a
-                  href={post.category.href}
+                <span
                   className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                 >
                   {post.category.title}
-                </a>
+                </span>
               </div>
               <div className="group relative grow">
                 <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href={post.href}>
+                  <a
+                    href={post.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <span className="absolute inset-0" />
                     {post.title}
                   </a>
                 </h3>
                 <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
               </div>
-              <div className="relative mt-8 flex items-center gap-x-4 justify-self-end">
+              {/* <div className="relative mt-8 flex items-center gap-x-4 justify-self-end">
                 <img alt="" src={post.author.imageUrl} className="size-10 rounded-full bg-gray-50" />
                 <div className="text-sm/6">
                   <p className="font-semibold text-gray-900">
@@ -92,7 +78,7 @@ export default function Blog() {
                   </p>
                   <p className="text-gray-600">{post.author.role}</p>
                 </div>
-              </div>
+              </div> */}
             </article>
           ))}
         </div>

@@ -100,20 +100,22 @@ export default function Navbar() {
               : 'opacity-0 w-0 pointer-events-none'
           }`}
         >
-          <a
-            href="mailto:bilal@example.com"
-            aria-label="Send email"
+          <button
+            type="button"
+            onClick={() => scrollToSection('contact')}
+            aria-label="Go to contact section"
             className="text-white hover:text-gray-300 transition-colors"
           >
             <Mail size={20} />
-          </a>
-          <a
-            href="tel:+1234567890"
-            aria-label="Call"
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToSection('contact')}
+            aria-label="Go to contact section"
             className="text-white hover:text-gray-300 transition-colors"
           >
             <Phone size={20} />
-          </a>
+          </button>
         </div>
       </div>
     </nav>
